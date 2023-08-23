@@ -38,8 +38,9 @@
 
       <div class="logo">
         <!-- Uncomment below if you prefer to use an image logo -->
-        <h1><a href="#">Youth Month</a></h1>
-        <!-- <a href="index.html"><img src="assets/img/aisec-logo.png" alt="" class="img-fluid"></a> -->
+        <!-- <h1><a href="#">Youth Month</a></h1> -->
+        <a href="index.html" class="ym-nav-logo"><img src="assets/img/ym-logo-light.png" alt=""><span>Youth
+            <b>Month</b></span></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -64,7 +65,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <img src="./assets/img/ym-logo.png" style="width: 300px;">
+          <img src="./assets/img/ym-logo-yellow.png" style="width: 300px;">
           <h2 class="animate__animated animate__fadeInDown">Youth<span>&nbsp;Month</span></h2>
           <p class="animate__animated fanimate__adeInUp">Youth Month is an annual event designed to bring youth access
             and awareness of opportunities and transformational insight. It seeks to create a one month long event that
@@ -104,44 +105,56 @@
           <p>Who we are</p>
         </div>
 
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6 pt-4 pt-lg-0">
+        <div class="flex content" data-aos="fade-up">
+          <div class="col-sm-12 col-lg-5 shadowed card">
+            <h2 class="section-subtitle">Youth Month</h2>
             <p>
-              "Future forward" expresses that the event is designed to help young people prepare for the future, develop
-              the skills and knowledge they need to succeed, and take an active role in shaping their own futures.
-            </p>
-            <p>
-              The theme of "future forward" inspires young people to think about their goals and aspirations, and to
-              take steps towards achieving them while encouraging them to explore emerging trends and technologies that
-              are likely to shape the future of work and society.
+              Youth Month is an annual event organized by AIESEC, founded in 2022, where the Country Managers, members
+              and youths to build new projects, network, learn new skills.Celebrated from September to October, This
+              event serves as a platform for young people to come together, share experiences, and discuss critical
+              global issues. It features interactive workshops, inspiring keynote speeches, and insightful panel
+              discussions, creating an environment that fosters personal growth, leadership development, and
+              cross-cultural understanding.
             </p>
           </div>
-          <div class="col-lg-6">
-            <h2 class="section-subtitle">Targets</h2>
-            <div class="wrapper-roll">
-              <div class="container">
-                <i class="fas fa-utensils"></i>
-                <span class="num" data-val="100000">100,000</span>
-                <span class="text">Students Spaces</span>
-              </div>
-              <div class="container">
-                <i class="fas fa-smile-beam"></i>
-                <span class="num" data-val="15000">15,000</span>
-                <span class="text">Sign Ups</span>
-              </div>
-              <div class="container">
-                <i class="fas fa-list"></i>
-                <span class="num" data-val="10000000">1M+</span>
-                <span class="text">Virtual Reach</span>
-              </div>
-              <div class="container">
-                <i class="fas fa-star"></i>
-                <span class="num" data-val="10">10</span>
-                <span class="text">Campuses</span>
-              </div>
+          <div class="col-sm-12 col-lg-5 shadowed card">
+            <h2 class="section-subtitle">Theme</h2>
+            <p>
+              The theme for the event is “Future forward" expresses that the event is designed to help young people
+              prepare for the future, develop the skills and knowledge they need to succeed, and take an active role in
+              shaping their own futures.It inspires them to think about their goals and aspirations, and take steps
+              towards achieving them while encouraging them to explore emerging trends and technologies that are likely
+              to shape the future of work and society.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container targets">
+        <div>
+          <h2 class="section-subtitle">Targets</h2>
+          <h3>We'd love to impact</h3>
+          <div class="wrapper-roll">
+            <div class="container">
+              <i class="fas fa-utensils"></i>
+              <span class="num" data-val="100000">100,000</span>
+              <span class="text">Students Spaces</span>
+            </div>
+            <div class="container">
+              <i class="fas fa-smile-beam"></i>
+              <span class="num" data-val="15000">15,000</span>
+              <span class="text">Sign Ups</span>
+            </div>
+            <div class="container">
+              <i class="fas fa-list"></i>
+              <span class="num" data-val="10000000">1M+</span>
+              <span class="text">Virtual Reach</span>
+            </div>
+            <div class="container">
+              <i class="fas fa-star"></i>
+              <span class="num" data-val="10">10</span>
+              <span class="text">Campuses</span>
             </div>
           </div>
-
         </div>
       </div>
     </section><!-- End About Section -->
@@ -154,46 +167,70 @@
           <h2>Pillars</h2>
           <p>Youth Month Pillars</p>
         </div>
-
-        <div class="grid">
-          <div class="">
-            <div class="icon-box" data-aos="zoom-in-left">
-              <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Future Skills Workshops</a></h4>
-              <p class="description">This includes workshops and sessions that focus on developing the skills that
-                young people will need to succeed in the future, such as digital literacy, creativity, critical
-                thinking, adaptability and their role in the community.
-              </p>
+        <p class="section-subtitle" style="margin-bottom: 3rem;">BIG 4 FOCUS AREAS:</p>
+        <div class="pillars-carousel">
+          <div class="arrow-left" onclick="movePillarSlide(false)">&lt;</div>
+          <div class="slide__track-container">
+            <div class="slide__track">
+              <div class="slide current-slide">
+                <div class="left">
+                  <img src="./assets/img/gen/vibrant_1.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="pillar">Future Skills Workshops</div>
+                  <div class="pillar-description">
+                    This includes workshops and sessions that focus on developing the skills that young people will need
+                    to succeed in the future, such as digital literacy, creativity, critical thinking, adaptability and
+                    their role in the community.
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="left">
+                  <img src="./assets/img/gen/vibrant_2.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="pillar">Entrepreneurship and innovation</div>
+                  <div class="pillar-description">
+                    This includes sessions and activities that encourage young people to think creatively and develop
+                    entrepreneurial skills that will make them relevant in an evolving world.
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="left">
+                  <img src="./assets/img/gen/vibrant_3.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="pillar">Networking and Mentorship</div>
+                  <div class="pillar-description">
+                    The aim is to provide opportunities for young people to connect with mentors and peers in their
+                    fields of interest.
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="left">
+                  <img src="./assets/img/gen/vibrant_4.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="pillar">Career Development and Placement</div>
+                  <div class="pillar-description">
+                    This includes career development resources such as resume workshops, interview coaching, and job
+                    placement services as well as provide guidance on emerging career paths.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="">Entrepreneurship and innovation</a></h4>
-              <p class="description">This includes sessions and activities that encourage young people to think
-                creatively and develop entrepreneurial skills that will make them relevant in an evolving world</p>
-            </div>
-          </div>
-
-          <div class="">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-card-checklist" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Networking and Mentorship</a></h4>
-              <p class="description">The aim is to provide opportunities for young people to connect with mentors and
-                peers in their fields of interest.
-              </p>
-            </div>
-          </div>
-          <div class="">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
-              <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Career Development and Placement</a></h4>
-              <p class="description">This includes career development resources such as resume workshops, interview
-                coaching, and job placement services as well as provide guidance on emerging career paths.</p>
-            </div>
-          </div>
+          <ul class="pillar-carousel-indicators">
+            <li class="carousel-indicator active"></li>
+            <li class="carousel-indicator"></li>
+            <li class="carousel-indicator"></li>
+            <li class="carousel-indicator"></li>
+          </ul>
+          <div class="arrow-right" onclick="movePillarSlide(true)">&gt;</div>
         </div>
-
       </div>
     </section><!-- End Services Section -->
 
@@ -206,6 +243,8 @@
           <p>History</p>
         </div>
         <h2 class="section-subtitle">Youth Month 2022</h2>
+        <h3>Pictures of students in different universities where the youth month was held during
+           and after the very informative and insightful sessions</h3>
 
         <ul id="portfolio-flters" class="d-flex justify-content-end" data-aos="fade-up">
           <li data-filter="*" class="filter-active">All</li>
@@ -220,8 +259,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
+              <h4>JKUAT</h4>
+              <p>...</p>
               <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
@@ -231,8 +270,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
+              <h4>JKUAT</h4>
+              <p>...</p>
               <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
@@ -240,10 +279,10 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
+              <h4>JKUAT</h4>
+              <p>...</p>
               <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
@@ -253,8 +292,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>KU</h4>
+              <p>...</p>
               <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
@@ -262,10 +301,10 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
+              <h4>JKUAT</h4>
+              <p>...</p>
               <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
@@ -275,20 +314,42 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
+              <h4>MOI</h4>
+              <p>...</p>
               <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-10.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+              <h4>STRATHMORE</h4>
+              <p>...</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-11.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>KU</h4>
+              <p>...</p>
+              <a href="assets/img/portfolio/portfolio-11.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>KU</h4>
+              <p>...</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -297,8 +358,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
+              <h4>KU</h4>
+              <p>...</p>
               <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
@@ -308,8 +369,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
+              <h4>MOI</h4>
+              <p>...</p>
               <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
@@ -329,129 +390,179 @@
           <h2>Partners</h2>
           <p>Youth Month Partner overview</p>
         </div>
-
-        <div class="row card-container">
-          <div class="img-card iCard-style4" data-aos="fade-up" data-aos-duration="1000">
+        <div class="partner-info" style="margin-top: -1.8rem;">
+          <p>AIESEC – founder and organizer of youth month 2022- is the world's largest youth-run organization
+            developing the leadership potential of young people in 120+ countries and territories across 2600
+            universities, we provide students and recent graduates with life-changing experiences to intern or volunteer
+            abroad. We partner with organizations ranging from Fortune 500 to local enterprises in developing and
+            sourcing their global talent needs across our network.</p>
+        </div>
+        <h3 class="section-subtitle" style="margin-top: 2rem; margin-bottom: 1rem;">Partnering with us offers you the
+          opportunity for:</h3>
+        <div class="row card-container" style="margin-top: 1rem;">
+          <div class="img-card" data-aos="fade-up" data-aos-duration="1000">
             <div class="card-content">
               <div class="card-image">
-                <span class="card-caption">One on One</span>
-                <img src="assets/img/partners/fist-icon.png" />
+                <img src="assets/img/partners/fist-icon.webp" />
               </div>
 
-              <div class="card-title"><span>EMPOWER</span></div>
-
-              <div class="toggle" onclick="showText()">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <br>
+              <div class="card-title"><span>Global Networking</span></div>
               <div class="card-text">
                 <p>
-                  Organizations with youth empowerment initiatives, programs and products will find youth month ideal to
-                  get youth participants for their programs. With a targeted reached of 100,000 students from 10
-                  campuses over 30 days.
+                  AIESEC has a vast network of young leaders,patners & professionals across the world and patners can
+                  gain access to this diverse pool of talented individuals which can provide valuable opportunities for
+                  collaboration, knowledge exchange, and future partnerships.
                 </p>
               </div>
-
-            </div>
-
-            <div class="card-link">
-              <a type="button" title="Read Full" onclick="showText()">
-                <span>Read More</span>
-              </a>
             </div>
           </div>
-          <div class="img-card iCard-style4" data-aos="fade-up" data-aos-duration="1000">
+          <div class="img-card" data-aos="fade-up" data-aos-duration="1000">
             <div class="card-content">
               <div class="card-image">
-                <span class="card-caption">One on One</span>
-                <img src="assets/img/partners/engage-icon.png" />
+                <img src="assets/img/partners/engage-icon.webp" />
               </div>
 
-              <div class="card-title"><span>ENGAGE</span></div>
-
-              <div class="toggle" onclick="showText()">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <br>
-
+              <div class="card-title"><span>Brand Exposure</span></div>
               <div class="card-text">
                 <p>
-                  Organizations with subject matter expertise have the opportunity to engage with 1000-9000 students
-                  from 9 different universities.
+                  The reputation and global reach of AIESEC can aid in boosting the brand's exposure internationally.
+                  AIESEC can use its vast network, social media platforms, and communication avenues to publicize the
+                  organization's initiatives, activities, and accomplishments. Through attracting new participants,
+                  sponsors, and stakeholders, the organization's impact and reach can be expanded.
                 </p>
               </div>
-
-            </div>
-
-            <div class="card-link">
-              <a type="button" title="Read Full" onclick="showText()">
-                <span>Read More</span>
-              </a>
             </div>
           </div>
-          <div class="img-card iCard-style4" data-aos="fade-up" data-aos-duration="1000">
+          <div class="img-card" data-aos="fade-up" data-aos-duration="1000">
             <div class="card-content">
               <div class="card-image">
-                <span class="card-caption">Image Caption</span>
-                <img src="assets/img/partners/interact-icon.png" />
+                <img src="assets/img/partners/interact-icon.webp" />
               </div>
 
-              <div class="card-title"><span>INTERACT</span></div>
-
-              <div class="toggle" onclick="showText()">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <br>
-
+              <div class="card-title"><span>Sustainable Partnerships</span></div>
               <div class="card-text">
                 <p>
-                  Organizations with products targeting a demographic of 18-24 year olds will have the opportunity to
-                  interact , engage and acquire customers for their products.
+                  AIESEC seeks to build long-lasting relationships with organizations by working together on more than
+                  just one project or event. AIESEC may help organizations by providing continuing support, establishing
+                  a plan for sustainable growth, and looking into potential future partnerships that are in line with
+                  the goals and ambitions of both organizations.
                 </p>
               </div>
-
             </div>
+          </div>
+          <div class="img-card" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card-content">
+              <div class="card-image">
+                <span class="card-caption"></span>
+                <img src="assets/img/partners/interact-icon.webp" />
+              </div>
 
-            <div class="card-link">
-              <a type="button" title="Read Full" onclick="showText()">
-                <span>Read More </span>
-              </a>
+              <div class="card-title"><span>Youth Empowerment</span></div>
+              <div class="card-text">
+                <p>
+                  AIESEC is committed to empowering young people to become responsible leaders and active global
+                  citizens.Collaborating with AIESEC for Youth Month demonstrates your commitment to youth development
+                  and social responsibility. It showcases your organization's dedication to fostering leadership,
+                  education, and positive change within the community.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section><!-- End Team Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Partners</h2>
+        <div class="partner-info" style="margin-top: 2rem;">
+          <p>Every collaboration including youth month is distinct and formed based on common objectives that work
+            towards bringing awareness and access of opportunities</p>
         </div>
-
-        <div class="carousel">
-          <div class="pop-up-carousel">
-            <span class="carousel__button carousel__button--left"><img src="assets/right-arrow-img.svg" alt=""
-                width="25" height="25"></span>
-            <div class="carousel__track-container">
-              <ul class="carousel-track">
-                <li class="carousel-slide"><img class="carousel-image" src="assets/img/partners/absa.png" alt="">
-                </li>
-                <li class="carousel-slide"><img class="carousel-image" src="assets/img/partners/ncba.jpg" alt="">
-                </li>
-                <li class="carousel-slide"><img class="carousel-image" src="assets/img/partners/unkut.png" alt="">
-                </li>
-              </ul>
-            </div>
-            <span class="carousel__button carousel__button--right"><img src="assets/right-arrow-img.svg" alt=""
-                width="25" height="25"></span>
+        <h3 class="section-subtitle" style="margin-top: 2rem;">Last Year's Partners</h3>
+        <div class="previous-partners">
+          <div class="previous-partner-card">
+            <img src="assets/img/partners/faulu.webp" alt="">
+            <p>The Old Mutual Foundation, affiliated with the Old Mutual Group and Faulu Microfinance Bank, serves as
+              our social responsibility division. During youth month 2022, the Foundation collaborated with AIESEC to
+              educate students and young individuals about making improved financial choices. These efforts included
+              promoting the importance of early savings and fostering financial awareness among the youth.</p>
+          </div>
+          <div class="previous-partner-card">
+            <img src="assets/img/partners/old_mutual.webp" alt="">
+            <p>By training the youth in skills related to banking sector and offering internships for our international
+              network, they can access career skills that employers look out for, get professional help from experts on
+              how to draft better CVs and cover letters as well as unlimited access to job opportunities. Ultimately,
+              training and internships can help by creating more opportunities for everyone involved</p>
+          </div>
+        </div>
+        <h3 class="section-subtitle" style="margin-top: 2rem;">National Partners</h3>
+        <div class="global-partners" style=" max-width: 1200px; margin: auto;">
+          <div class="global-partners-card">
+            <img src="assets/img/partners/vivo_energy.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/faulu_2.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/old_mutual_partner.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/qa.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/absa.webp" alt="">
+          </div>
+        </div>
+        <h3 class="section-subtitle" style="margin-top: 2rem;">Global Partners</h3>
+        <div class="global-partners">
+          <div class="global-partners-card">
+            <img src="assets/img/partners/lhh.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/pwc.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/microsoft.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/mindvalley.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/adb.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/ie.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/wipro.svg" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/nexans.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/nokia.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/schneider-electric.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/loreal.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/dp-world.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/ing.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/amplifon.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/int_sos.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/tata_c.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/husqvarna.webp" alt="">
+          </div>
+          <div class="global-partners-card">
+            <img src="assets/img/partners/ucb.webp" alt="">
           </div>
         </div>
       </div>
@@ -467,50 +578,55 @@
         </div>
 
         <div class="row">
-            <div class="info">
-              <div class="contact-person">
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email 1:</h4>
-                  <a href="mailto:emma.neema@aiesec.net">emma.neema@aiesec.net</a>
-                </div>
+          <div class="flex info">
+            <div class="contact-person">
+              <img src="./assets/img/contact/vivian pic.jpeg" alt="">
 
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Phone 1:</h4>
-                  <p>+254 732 687 780</p>
-                </div>
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email</h4>
+                <p><a href="mailto:emma.neema@aiesec.net">emma.neema@aiesec.net</a></p>
               </div>
 
-              <div class="contact-person">
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email 2:</h4>
-                  <a href="mailto:vivian.gitonga@aiesec.net">vivian.gitonga@aiesec.net</a>
-                </div>
-
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Phone 2:</h4>
-                  <p>+254 797 338 660</p>
-                </div>
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Phone</h4>
+                <p>+254 732 687 780</p>
               </div>
-
-              <div class="contact-person">
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email 3:</h4>
-                  <a href="mailto:diana.gudu@aiesec.net">diana.gudu@aiesec.net</a>
-                </div>
-
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Phone 3:</h4>
-                  <p>+254 732 247 452</p>
-                </div>
-              </div>
-
             </div>
+
+            <div class="contact-person">
+              <img src="./assets/img/contact/emma pic.jpeg" alt="">
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email</h4>
+                <p><a href="mailto:vivian.gitonga@aiesec.net">vivian.gitonga@aiesec.net</a></p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Phone</h4>
+                <p>+254 797 338 660</p>
+              </div>
+            </div>
+
+            <div class="contact-person">
+              <img src="./assets/img/contact/gudu pic.jpeg" alt="">
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email</h4>
+                <p><a href="mailto:diana.gudu@aiesec.net">diana.gudu@aiesec.net</a></p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Phone</h4>
+                <p>+254 732 247 452</p>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -522,9 +638,14 @@
     <div class="container">
       <h3>AIESEC</h3>
       <div class="social-links">
-        <a href="https://twitter.com/AIESECinKenya?t=QA02PHQK7pTnwemfeDg6qg&s=08" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/AIESECKenya?mibextid=ZbWKwL" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://instagram.com/aiesecinkenya?igshid=MzRlODBiNWFlZA==" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://twitter.com/AIESECinKenya?t=QA02PHQK7pTnwemfeDg6qg&s=08" target="_blank" class="twitter"><i
+            class="bx bxl-twitter"></i></a>
+        <a href="https://www.tiktok.com/@aiesecinkenya_/" target="_blank" class="tiktok"><i
+            class="bx bxl-tiktok"></i></a>
+        <a href="https://instagram.com/aiesecinkenya?igshid=MzRlODBiNWFlZA==" target="_blank" class="instagram"><i
+            class="bx bxl-instagram"></i></a>
+        <a href="https://ke.linkedin.com/company/the-aiesec-in-kenya" target="_blank" class="linkedin"><i
+            class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
         &copy; Copyright <strong><span>AIESEC</span></strong>. All Rights Reserved
@@ -546,28 +667,6 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <!-- This comes before main -->
-  <script>
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const slideWidth = track.getBoundingClientRect().width / slides.length;
-    const midIndex = Math.floor(slides.length / 2);
-
-
-    function stageCarousel() {
-      track.style.transform = 'translateX(-' + slideWidth * midIndex + 'px)';
-      slides[midIndex].classList.add('current-slide');
-
-      return new Promise(resolve => setTimeout(resolve, 100));
-    }
-
-    async function finishStaging() {
-      await stageCarousel();
-      track.classList.add('transitionSpeed');
-    }
-
-    finishStaging();
-  </script>
   <script src="assets/js/main.js"></script>
 
 </body>

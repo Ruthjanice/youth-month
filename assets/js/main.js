@@ -1,14 +1,4 @@
-const toggles = document.querySelectorAll('.toggle');
-
-
-function showText() {
-  toggles.forEach((element) => {
-      element.classList.toggle('active');
-  });
-}
-
-
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -83,12 +73,17 @@ function showText() {
    * Toggle .header-scrolled class to #header when page is scrolled
    */
   let selectHeader = select('#header')
+  let nav_logo = select('.ym-nav-logo')
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
         selectHeader.classList.add('header-scrolled')
+        nav_logo.classList.add('shrink')
+        nav_logo.classList.add('invert')
       } else {
         selectHeader.classList.remove('header-scrolled')
+        nav_logo.classList.remove('shrink')
+        nav_logo.classList.remove('invert')
       }
     }
     window.addEventListener('load', headerScrolled)
@@ -114,7 +109,7 @@ function showText() {
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -123,7 +118,7 @@ function showText() {
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -133,7 +128,7 @@ function showText() {
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -171,9 +166,9 @@ function showText() {
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -181,67 +176,13 @@ function showText() {
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
     }
 
   });
-
-  // /**
-  //  * Initiate portfolio lightbox 
-  //  */
-  // const portfolioLightbox = GLightbox({
-  //   selector: '.portfolio-lightbox'
-  // });
-
-  // /**
-  //  * Portfolio details slider
-  //  */
-  // new Swiper('.portfolio-details-slider', {
-  //   speed: 400,
-  //   loop: true,
-  //   autoplay: {
-  //     delay: 5000,
-  //     disableOnInteraction: false
-  //   },
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'bullets',
-  //     clickable: true
-  //   }
-  // });
-
-  // /**
-  //  * Testimonials slider
-  //  */
-  // new Swiper('.testimonials-slider', {
-  //   speed: 600,
-  //   loop: true,
-  //   autoplay: {
-  //     delay: 5000,
-  //     disableOnInteraction: false
-  //   },
-  //   slidesPerView: 'auto',
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'bullets',
-  //     clickable: true
-  //   },
-  //   breakpoints: {
-  //     320: {
-  //       slidesPerView: 1,
-  //       spaceBetween: 20
-  //     },
-
-  //     1200: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 20
-  //     }
-  //   }
-  // });
-
   /**
    * Animation on scroll
    */
@@ -256,120 +197,49 @@ function showText() {
 
 })()
 
+const pillarSlideTrack = document.querySelector('.slide__track');
+const pillarSlides = Array.from(pillarSlideTrack.children);
+const slideIndicators = document.querySelectorAll('.pillar-carousel-indicators .carousel-indicator');
 
-const LButton = document.querySelector('.carousel__button--left');
-const RButton = document.querySelector('.carousel__button--right');
+function movePillarSlide(direction) {
+  const currentSlide = pillarSlideTrack.querySelector('.current-slide');
 
+  if (!currentSlide) {
+    alert('No current slide');
+    return;
+  }
 
-// const midIndex = Math.floor(slides.length / 2);
-// const midElement = slides[midIndex];
-// let slideIndex = midIndex;
-// console.log(slideIndex);
+  const nextSlide = direction ? currentSlide.nextElementSibling : currentSlide.previousElementSibling;
+  let amountToMove = currentSlide.getBoundingClientRect().width;
+  const slideIndex = pillarSlides.findIndex(slide => slide === currentSlide);
+  amountToMove = amountToMove * (slideIndex + (direction ? 1 : -1));
 
-// track.style.transform = 'translateX(-' + width * slideIndex + 'px)';
-// midElement.classList.add('current-slide');
+  if (nextSlide === null) return;
 
-// Initialise play the carousel
-// need to make this variable from DOM
-var directionForward = true;
-const slideTimeInMs = 3000;
-var carouselPaused = false;
-let slideIndex = midIndex + 1;
-var width = slideWidth;
+  let move = 'translateX(-' + amountToMove + 'px)';
+  move += ' translateY(-50%)'
+  pillarSlideTrack.style.transform = move;
+  currentSlide.classList.remove('current-slide');
+  nextSlide.classList.add('current-slide');
 
+  // Update the indicators
+  const currentIndicator = slideIndicators[slideIndex];
+  const nextIndicator = direction ? currentIndicator.nextElementSibling : currentIndicator.previousElementSibling;
+  currentIndicator.classList.remove('active');
 
+  if (nextIndicator === null) return;
 
-function sleep(ms) {
-    if (carouselPaused == true) { return 0 }
-    else {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    };
-};
-
-
-function AutoSlideScroll() {
-    // console.log(slideIndex);
-    if (slideIndex >= slides.length - 1) { slideIndex = slides.length - 1; }
-    else if (slideIndex <= 0) { slideIndex = 0; };
-
-    if (directionForward === true) {
-        track.style.transform = 'translateX(-' + width * slideIndex + 'px)';
-        if (slideIndex >= 1) {
-            slides[slideIndex].classList.add('current-slide');
-            slides[slideIndex - 1].classList.remove('current-slide');
-        } else {
-            slides[slideIndex].classList.add('current-slide');
-            slides[slideIndex + 1].classList.remove('current-slide');
-        }
-    } else {
-        if (slideIndex >= slides.length - 1) {
-            slides[slideIndex].classList.add('current-slide');
-            slides[slideIndex - 1].classList.remove('current-slide');
-        } else {
-            slides[slideIndex].classList.add('current-slide');
-            slides[slideIndex + 1].classList.remove('current-slide');
-        }
-        track.style.transform = 'translateX(-' + width * slideIndex + 'px)';
-    }
-};
-
-function manualSlideScroll() {
-    AutoSlideScroll();
+  nextIndicator.classList.add('active');
 }
 
-async function InitializeSlides() {
-    while (!document.hidden && carouselPaused === false) {
-        if (slideIndex < slides.length - 1 && directionForward === true) {
-            await sleep(slideTimeInMs);
-            AutoSlideScroll();
-            slideIndex++;
-        } else {
-            await sleep(slideTimeInMs);
-            AutoSlideScroll();
-            slideIndex--;
-            if (slideIndex === 0) { directionForward = true; }
-            else { directionForward = false; };
-        }
-    }
-    // console.log('Done sliding for now');
-}
-
-InitializeSlides();
-
-// This won't work as intended = bugs noted TODO: make this efficient.
-track.addEventListener("visibilitychange", () => {
-    if (track.visibilityState === 'hidden') {
-        carouselPaused = true;
-    } else if (track.visibilityState === 'visible' && document.activeElement !== LButton && document.activeElement !== RButton) {
-        carouselPaused = false;
-        InitializeSlides();
-    } else if (track.visibilityState === 'visible' && carouselPaused === true) {
-        async function awaitResume() {
-            await sleep(4000);
-            carouselPaused = false;
-            InitializeSlides();
-        }
-        awaitResume();
-    }
-});
-
-
-// Check if user has pressed any of the buttons so that carousel can pause
-// Use currentSlideindex - get it from the async function so that it's more responsive - if possible
-LButton.addEventListener('click', () => {
-    carouselPaused = true;
-    directionForward = false;
-
-    manualSlideScroll();
-    slideIndex--;
-    // console.log('clicked');
-});
-
-RButton.addEventListener('click', () => {
-    carouselPaused = true;
-    directionForward = true;
-
-    manualSlideScroll();
-    slideIndex++;
-    // console.log('clicked');
+slideIndicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    const currentSlide = pillarSlideTrack.querySelector('.current-slide');
+    const currentIndicator = document.querySelector('.pillar-carousel-indicators .active');
+    currentSlide.classList.remove('current-slide');
+    currentIndicator.classList.remove('active');
+    pillarSlides[index].classList.add('current-slide');
+    indicator.classList.add('active');
+    pillarSlideTrack.style.transform = 'translateX(-' + (currentSlide.getBoundingClientRect().width * index) + 'px) translateY(-50%)';
+  });
 });
